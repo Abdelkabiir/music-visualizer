@@ -1,0 +1,35 @@
+<!-- visualizer.component.html -->
+<div class="visualizer-container">
+  <div class="metadata">
+    <h1 class="song-name">{{ songTitle }}</h1>
+    <h2 class="duration">{{ currentTime }} / {{ duration }}</h2>
+  </div>
+
+  <canvas #backgroundCanvas class="background-canvas"></canvas>
+  <canvas #visualizerCanvas class="main-canvas"></canvas>
+  <canvas #particleCanvas class="particle-canvas"></canvas>
+
+  <div class="timer">{{ currentTime }}</div>
+
+  <div class="controls">
+    <input
+      type="file"
+      (change)="onFileSelected($event)"
+      accept="audio/*"
+      #fileInput
+      class="hidden">
+
+    <button
+      (click)="fileInput.click()"
+      class="btn btn-primary">
+      Select Audio
+    </button>
+
+    <button
+      (click)="togglePlay()"
+      [class.playing]="isPlaying"
+      class="btn btn-play">
+      {{ isPlaying ? 'Pause' : 'Play' }}
+    </button>
+  </div>
+</div>
