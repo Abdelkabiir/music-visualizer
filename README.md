@@ -17,7 +17,7 @@ An interactive music visualization application built with Angular and Web Audio 
 
 ## Demo
 
-// TODO
+![Screenshot 2025-01-05 at 15 40 59](https://github.com/user-attachments/assets/83523406-4a10-44fc-ae68-a3594769885a)
 
 ## Technologies Used
 
